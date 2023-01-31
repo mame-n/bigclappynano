@@ -22,9 +22,6 @@ function yasumi (haku: number) {
     basic.pause(haku * 400)
 }
 input.onButtonPressed(Button.A, function () {
-	
-})
-input.onGesture(Gesture.Shake, function () {
     gogo = gogo * -1
     if (gogo < 0) {
         basic.showLeds(`
@@ -44,8 +41,11 @@ input.onGesture(Gesture.Shake, function () {
             `)
     }
 })
+input.onGesture(Gesture.Shake, function () {
+	
+})
 function claps () {
-    for (let index = 0; index < 25; index++) {
+    for (let index = 0; index < 20; index++) {
         clap(0.3)
     }
 }
