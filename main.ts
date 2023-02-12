@@ -1,8 +1,8 @@
 function clap (haku: number) {
     pins.digitalWritePin(DigitalPin.P0, 1)
-    basic.pause(100)
+    basic.pause(80)
     pins.digitalWritePin(DigitalPin.P0, 0)
-    basic.pause(haku * 400)
+    basic.pause(haku * 320)
 }
 function GJ () {
     for (let index = 0; index < 3; index++) {
@@ -19,7 +19,7 @@ function GJ () {
     yasumi(1)
 }
 function yasumi (haku: number) {
-    basic.pause(haku * 400)
+    basic.pause(haku * 320)
 }
 input.onButtonPressed(Button.A, function () {
     gogo = gogo * -1
@@ -52,9 +52,6 @@ function claps () {
 let gogo = 0
 gogo = -1
 basic.forever(function () {
-    if (gogo > 0) {
-        GJ()
-    }
     if (gogo > 0) {
         GJ()
     }
